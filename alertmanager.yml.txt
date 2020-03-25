@@ -1,0 +1,14 @@
+global:
+  smtp_require_tls: false
+route:
+  group_by: ['alertname']
+  receiver: email-me
+receivers:
+ - name: email-me
+   email_configs:
+   - to: lavitra.kumar@cehdev.com
+     from: lavitra.kumar@cehdev.com
+     smarthost: 10.67.169.92:25
+     auth_username: "lavitra.kumar@cehdev.com"
+     auth_identity: "lavitra.kumar@cehdev.com"
+     auth_password: "Infy123++"
